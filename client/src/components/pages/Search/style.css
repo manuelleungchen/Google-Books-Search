@@ -1,0 +1,12 @@
+main {
+    text-align: left;
+}
+
+main p {
+    font-size: large;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: row;
+}

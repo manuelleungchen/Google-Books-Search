@@ -1,0 +1,25 @@
+li {
+    padding: 10px;
+}
+
+#one {
+    /* background-color: goldenrod; */
+    text-align: left;
+}
+
+#two {
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: right;
+}
+
+#three {
+    /* background-color: peachpuff; */
+}
+
+#four {
+    /* background-color: seagreen; */
+}

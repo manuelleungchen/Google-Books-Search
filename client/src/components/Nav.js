@@ -3,7 +3,7 @@ import React from 'react'
 
 const Nav = () => {
     return (
-        <nav>
+        <nav className="blue-grey darken-3">
             <div class="nav-wrapper">
                 <a href="/search" class="brand-logo center">Google Books</a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
