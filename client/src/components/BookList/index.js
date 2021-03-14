@@ -13,9 +13,9 @@ export function BookListItem({ id, title, subtitle, authors, image, link, descri
         <li className="list-group-item blue-grey lighten-2" id={id}>
             <div className="row">
                 <div className="col s12 m7" id="titleDiv">
-                    <h4>{title}</h4>
-                    <h6>{subtitle}</h6>
-                    <p>{authors}</p>
+                    <h4 className="white-text">{title}</h4>
+                    <h6 className="brown-text">{subtitle}</h6>
+                    <p className="lime-text">{authors}</p>
                 </div>
                 <div className="col s12 m5" id="buttonsDiv">
                     <a className="btn lime darken-2"
