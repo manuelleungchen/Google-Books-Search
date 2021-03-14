@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer class="page-footer blue-grey lighten-3">
-            <div class="footer-copyright">
-                <div class="container">
+        <footer className="page-footer blue-grey lighten-3">
+            <div className="footer-copyright">
+                <div className="container">
                     © 2021 Copyright Text
                 </div>
             </div>

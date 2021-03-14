@@ -7,13 +7,15 @@ import Saved from './components/pages/Saved';
 import Footer from './components/Footer';
 import "./App.css";
 
+
+
 function App() {
     return (
         <div className="App">
             <Router>
                 <Nav />
                 <Header />
-                <Switch>
+                <Switch> 
                     <Route exact path="/" component={Search} />
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/saved" component={Saved} />

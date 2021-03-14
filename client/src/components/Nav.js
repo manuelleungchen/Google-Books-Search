@@ -4,9 +4,9 @@ import React from 'react'
 const Nav = () => {
     return (
         <nav className="blue-grey darken-3">
-            <div class="nav-wrapper">
-                <a href="/search" class="brand-logo center">Google Books</a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <div className="nav-wrapper">
+                <a href="/search" className="brand-logo center">Google Books</a>
+                <ul id="nav-mobile" className="left hide-on-med-and-down">
                     <li><a href="/search">Search</a></li>
                     <li><a href="/saved">Saved</a></li>
                 </ul>

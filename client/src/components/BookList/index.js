@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Button from '../Button';
 
 // BookList renders a materialize list item
 export function BookList({ children }) {
@@ -7,35 +8,37 @@ export function BookList({ children }) {
 }
 
 // BookListItem renders a materialize list item containing data from the Google Books api call
-export function BookListItem(props) {
+export function BookListItem({ id, title, subtitle, authors, image, link, description, savedPage }) {
     return (
-        <li className="list-group-item blue-grey lighten-2">
+        <li className="list-group-item blue-grey lighten-2" id={id}>
             <div className="row">
-                <div className="col s12 m8" id="one">
-                    <h4>The Hunger Games</h4>
-                    <p>Suzanne Collins</p>
+                <div className="col s12 m7" id="titleDiv">
+                    <h4>{title}</h4>
+                    <h6>{subtitle}</h6>
+                    <p>{authors}</p>
                 </div>
-                <div className="col s12 m4" id="two">
+                <div className="col s12 m5" id="buttonsDiv">
                     <a className="btn lime darken-2"
                         rel="noreferrer noopener"
                         target="_blank"
-                        href="http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
+                        href={link}
                     >
                         View
                         </a>
-                    <button className="btn lime darken-3">Save</button>
+                    {savedPage ? (
+                        <Button id={id} savedPage={savedPage} />
+                    ) : (
+                        <Button id={id} title={title} subtitle={subtitle} authors={authors} image={image} link={link} description={description} savedPage={savedPage}/>)}
                 </div>
             </div>
             <div className="row">
-                <div className="col s12 m3" id="three">
-                    <img src="http://img.recipepuppy.com/560556.jpg" />
+                <div className="col s12 m5 l3">
+                    <img src={image} alt="Book cover" />
                 </div>
-                <div className="col s12 m9" id="four">
-                    <p>Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.</p>
+                <div className="col s12 m7 l9">
+                    <p>{description}</p>
                 </div>
             </div>
         </li>
-
-        
     );
 }
