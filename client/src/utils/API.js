@@ -4,7 +4,7 @@ export default {
     // Search for books
     searchBooks: function (name) {
         const length = "10";
-        const apiK = "AIzaSyDBfcPAo_n_lGFENQGf8SQ-hAqrvFIy6WU";
+        const apiK = process.env.REACT_APP_API_KEY;
         return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${name}&printType=books&maxResults=${length}&key=${apiK}`)
     },
     // Gets all books
