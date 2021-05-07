@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License%3A-mit-darkgreen.svg)
 
 ## Description  
-Full MERN stack application. Google Books Search Application that allows to search books uisng the [Google Books API](https://developers.google.com/books) and save books to review or purchase later with the implementation of [MongoDB](https://www.mongodb.com/) database. The site is hosted on [Heroku](https://www.heroku.com/).
+Full MERN stack application. Web Application that allows to search books using the [Google Books API](https://developers.google.com/books) and saves books to review or purchase later with the implementation of [MongoDB](https://www.mongodb.com/) database. The site is hosted on [Heroku](https://www.heroku.com/).
 
 
 ![Screenshot](./client/src/images/google-books.png)
