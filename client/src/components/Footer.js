@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="page-footer blue-grey lighten-3">
             <div className="footer-copyright">
                 <div className="container">
-                    © 2021 Copyright Text
+                    © 2023 Copyright
                 </div>
             </div>
         </footer>

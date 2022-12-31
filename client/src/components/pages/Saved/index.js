@@ -35,7 +35,7 @@ const Saved = () => {
                                     description={book.description}
                                     savedPage={true}
                                 ></BookListItem>)
-                        })})
+                        })}
                     </BookList>
                 )
                 : (<h3>No Books Saved</h3>)}
