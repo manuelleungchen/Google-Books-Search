@@ -4,12 +4,13 @@
   "description": "Google Books Search",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-      "server": "nodemon server.js",
-      "client": "npm start --prefix client",
-      "clientinstall": "npm install --prefix client",
-      "dev": "concurrently \"npm run server\" \"npm run client\"",
-      "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build -- prefix client"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "render-postbuild": "npm run install && npm run build"
   },
   "author": "",
   "license": "ISC",
