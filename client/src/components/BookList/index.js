@@ -8,7 +8,7 @@ export function BookList({ children }) {
 }
 
 // BookListItem renders a materialize list item containing data from the Google Books api call
-export function BookListItem({ id, title, subtitle, authors, image, link, description, savedPage }) {
+export function BookListItem({ id, title, subtitle, authors, image, link, description, savedPage, pageType }) {
     return (
         <li className="list-group-item blue-grey lighten-2" id={id}>
             <div className="row">
@@ -26,7 +26,7 @@ export function BookListItem({ id, title, subtitle, authors, image, link, descri
                         View
                         </a>
                     {savedPage ? (
-                        <Button id={id} savedPage={savedPage} />
+                        (pageType === "saved" ? <Button id={id} savedPage={savedPage} /> : <span className="savedText lime-text">Saved</span>)
                     ) : (
                         <Button id={id} title={title} subtitle={subtitle} authors={authors} image={image} link={link} description={description} savedPage={savedPage}/>)}
                 </div>
@@ -36,7 +36,7 @@ export function BookListItem({ id, title, subtitle, authors, image, link, descri
                     <img src={image} alt="Book cover" />
                 </div>
                 <div className="col s12 m7 l9">
-                    <p>{description}</p>
+                    <p className="description">{description}</p>
                 </div>
             </div>
         </li>

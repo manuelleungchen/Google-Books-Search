@@ -20,3 +20,15 @@ img {
     object-fit: cover;
     float: left;
 }
+
+.savedText {
+    padding-top: 0.5rem;
+    font-size: large;
+}
+
+.description {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}

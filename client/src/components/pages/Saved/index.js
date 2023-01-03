@@ -34,6 +34,7 @@ const Saved = () => {
                                     link={book.link}
                                     description={book.description}
                                     savedPage={true}
+                                    pageType="saved"
                                 ></BookListItem>)
                         })}
                     </BookList>

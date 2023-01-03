@@ -9,6 +9,9 @@ const Search = () => {
     const [books, setBooks] = useState([]);
     const [bookSearch, setBookSearch] = useState("");
 
+    const [favoriteBooks, setFavoriteBooks] = useState([]);
+
+
     const handleInputChange = event => {
         // Destructure the name and value properties off of event.target
         // Update the appropriate state
@@ -24,6 +27,12 @@ const Search = () => {
                 setBooks(res.data.items)
             })
             .catch(err => console.log(err));
+
+        API.getBooks()
+            .then(res => {
+                setFavoriteBooks(res.data);
+            })
+            .catch(err => console.log(err))
     };
 
     return (
@@ -46,6 +55,7 @@ const Search = () => {
                     else {
                         thumbnail = book.volumeInfo.imageLinks.thumbnail;
                     }
+
                     return (
                         <BookListItem
                             key={book.id}
@@ -56,7 +66,8 @@ const Search = () => {
                             image={thumbnail}
                             link={book.volumeInfo.infoLink}
                             description={book.volumeInfo.description}
-                            savedPage={false}
+                            savedPage={favoriteBooks.some(savedBook => savedBook.link === book.volumeInfo.infoLink)}
+                            pageType="search"
                         ></BookListItem>)
                 })}
             </BookList>
