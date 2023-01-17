@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License%3A-mit-darkgreen.svg)
 
 ## Description  
-Full MERN stack application. Google Books Search Application that allows to search books uisng the [Google Books API](https://developers.google.com/books) and save books to review or purchase later with the implementation of [MongoDB](https://www.mongodb.com/) database. The site is hosted on [Heroku](https://www.heroku.com/).
+Full MERN stack application. Google Books Search Application that allows to search books uisng the [Google Books API](https://developers.google.com/books) and save books to review or purchase later with the implementation of [MongoDB](https://www.mongodb.com/) database. The site is hosted on [Render](https://render.com/).
 
 
 ![Screenshot](./client/src/images/google-books.png)
@@ -46,7 +46,7 @@ THEN the book is removed from the database
 3. Run command ```npm install``` to install any dependencies.
 
 ## Usage    
-* Navigate to [Google Books Site](https://safe-brushlands-83876.herokuapp.com/).
+* Navigate to [Google Books Site](https://google-books-l2ka.onrender.com).
 * Enter the name of a book on the searchbar.
 * Click on the search button.
 * Click on View button to check a book.
@@ -67,7 +67,7 @@ Tools used to Develop this MERN stack application:
 * [Materialize](https://materializecss.com/)
 * [Mongoose](https://www.npmjs.com/package/mongoose)
 * [Google Books API](https://developers.google.com/books)
-* [Heroku](https://www.heroku.com/)
+* [Render](https://render.com/)
 
 ## License
 Copyright (c) 2020 - Manuel Leung Chen
