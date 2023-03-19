@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from './components/Nav';
 import Header from './components/Header';
 import Search from './components/pages/Search';
@@ -12,16 +12,16 @@ import "./App.css";
 function App() {
     return (
         <div className="App">
-            <Router>
+            <BrowserRouter>
                 <Nav />
                 <Header />
-                <Switch> 
-                    <Route exact path="/" component={Search} />
-                    <Route exact path="/search" component={Search} />
-                    <Route exact path="/saved" component={Saved} />
-                </Switch>
+                <Routes> 
+                    <Route exact path="/" element={<Search />} />
+                    <Route exact path="/search" element={<Search />} />
+                    <Route exact path="/saved" element={<Saved />} />
+                </Routes>
                 <Footer />
-            </Router>
+            </BrowserRouter>
         </div>
     );
 }
